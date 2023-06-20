@@ -1,0 +1,336 @@
+<!-- <div class="notification-section notification-section-padding  notification-img ptb-10">
+    <div class="container-fluid">
+        <div class="notification-wrapper">
+            <div class="notification-pera-graph">
+                <p>Mua ngay được hưởng những ưu đãi lớn</p>
+            </div>
+            <div class="notification-btn-close">
+                <div class="notification-btn">
+                    <a href="#">Mua ngay</a>
+                </div>
+                <div class="notification-close notification-icon">
+                    <button><i class="pe-7s-close"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<style>
+    li.DXuat {
+        width: 78px;
+            height: 40px;
+    background-color: #ACDBA9;
+}
+</style>
+<header>
+    <div class="header-top-wrapper-2 border-bottom-2">
+        <div class="header-info-wrapper pl-200 pr-200">
+            <div class="header-contact-info">
+                <ul>
+                    <li><i class="pe-7s-call"></i> +089999999</li>
+                    <li><i class="pe-7s-mail"></i> <a href="#">nhasachHG@gmail.info</a></li>
+                </ul>
+            </div>
+            <div class="electronics-login-register">
+                <ul>
+                    <li *ngIf="kh_tenkh != ''"><a href="#"><i class="pe-7s-users"></i>{{kh_tenkh}}</a></li>
+                    <!-- <li><a data-bs-toggle="modal" data-target="#exampleCompare" href="#"><i
+                                class="pe-7s-repeat"></i>Compare</a></li> -->
+                    <!-- <li><a class="animate-right" href="#" data-bs-target="#exampleModal" data-bs-toggle="modal"
+                            title="Quick View">
+                            <i class="pe-7s-look"></i>
+                        </a></li> -->
+                    <li><a href="wishlist.html"><i class="pe-7s-like"></i>Yêu thích</a></li>
+                    <!-- <li><a href="#"><i class="pe-7s-flag"></i>US</a></li> -->
+                    <li *ngIf="!kh_tenkh">
+                        <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#exampleModal"
+                            style="margin-top: 5px; margin-right: -10px; background-color:#089789;">
+                            <i class="fa fa-lock"></i>
+                            Đăng nhập
+                        </button>
+                    </li>
+                    <li *ngIf="kh_tenkh != ''"><a href="#"> {{kh_tenkh}}</a>
+                        <ul>                                <li><a routerLink="/danhsachdathang/{{kh_id}}">Danh sách đặt hàng</a></li>
+
+                            <li><a routerLink="/danhsachmua/{{kh_id}}">Đánh giá sản phẩm</a></li>
+                            <li  class="DXuat" style="
+                            padding-bottom: 0px;
+                            height: 28px;
+                        " (click)="log_out()"><a  class="DXuat" routerLink="/">Đăng xuất</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header-bottom pt-40 pb-30 clearfix">
+        <div class="header-bottom-wrapper pr-200 pl-200">
+            <div class="logo-3">
+                <a href="index.html">
+                    <img src="assets/logo.png" alt="" style="width:167px;height: 50px;">
+                    <!-- <img src="assets/ikon2.png" alt=""> -->
+
+                </a>
+            </div>
+            <div class="categories-search-wrapper">
+                <div class="all-categories">
+                    <div class="select-wrapper">
+                        <!-- <select class="select"> -->
+                            <!-- <option value="">tìm kiếmc</option> -->
+                            <!-- <option value="" > <a href="index.html">Trang chủ </a></option>
+                            
+                            <option value="">Computers</option>
+                            <option value="">Laptops </option>
+                            <option value="">Camerea </option>
+                            <option value="">Watches</option>
+                            <option value="">Lights </option>
+                            <option value="">Air conditioner</option> -->
+                        <!-- </select> -->
+                    </div>
+                </div>
+                <div class="categories-wrapper">
+                    <form action="#" >
+                        <input (keypress)="keyPress($event)" [(ngModel)]="keyword" type="text" class="site-btn" placeholder="Nhập thứ bạn cần tìm?" name="s">
+                        <button type="submit" class="site-btn" name="s">SEARCH</button>
+                        <!-- <input placeholder="Nhập để tìm kiếm" type="text">
+                        <button type="button"> Search </button> -->
+                    </form>
+                </div>
+            </div>
+            <div class="trace-cart-wrapper">
+                <div class="trace same-style">
+                    <div class="same-style-icon">
+                        <a href="#"><i class="pe-7s-plane"></i></a>
+                    </div>
+                    <!-- <div class="same-style-text">
+                        <a href="#">Product <br>trace</a>
+                    </div> -->
+                </div>
+                <div class="categories-cart same-style">
+                    <div class="same-style-icon">
+                        <a routerLink="/cart" routerLinkActive="router-link-active"><i class="pe-7s-cart"></i></a>
+                    </div>
+                    <div class="same-style-text">
+                        <a href="cart.html">Giỏ hàng <br>{{totalItem}}</a> <i class="fa fa-trash-o"
+                            aria-hidden="true"></i>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-menu-area electro-menu d-md-block col-md-12 col-lg-12 col-12 d-lg-none d-xl-none">
+                <div class="mobile-menu">
+                    <nav id="mobile-menu-active">
+                        <ul class="menu-overflow">
+                            <li><a href="#">HOME</a>
+                                <ul>
+                                    <li><a href="index.html">Fashion</a></li>
+                                    <li><a href="index-fashion-2.html">Fashion style 2</a></li>
+                                    <li><a href="index-fruits.html">Fruits</a></li>
+                                    <li><a href="index-book.html">book</a></li>
+                                    <li><a href="index-electronics.html">electronics</a></li>
+                                    <li><a href="index-electronics-2.html">electronics style 2</a></li>
+                                    <li><a href="index-food.html">food & drink</a></li>
+                                    <li><a href="index-furniture.html">furniture</a></li>
+                                    <li><a href="index-handicraft.html">handicraft</a></li>
+                                    <li><a href="index-smart-watch.html">smart watch</a></li>
+                                    <li><a href="index-sports.html">sports</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">pages</a>
+                                <ul>
+                                    <li><a href="about-us.html">about us</a></li>
+                                    <li><a href="menu-list.html">menu list</a></li>
+                                    <li><a href="login.html">login</a></li>
+                                    <li><a href="register.html">register</a></li>
+                                    <li><a href="cart.html">cart page</a></li>
+                                    <li><a href="checkout.html">checkout</a></li>
+                                    <li><a href="wishlist.html">wishlist</a></li>
+                                    <li><a href="contact.html">contact</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">shop</a>
+                                <ul class="menu-overflow9">
+                                    <li data-filter="*" *ngFor="let item of dsLoaiSP">
+                                        <a  href="/loaisanpham"  (click)="locSP(item.IDLOAI)">{{item.TENLOAI}}</a>
+                                    </li>
+                                    <!-- <li><a href="shop-grid-3-col.html"> grid 3 column</a></li>
+                                    <li><a href="shop.html">grid 4 column</a></li>
+                                    <li><a href="shop-grid-box.html">grid box style</a></li>
+                                    <li><a href="shop-list-1-col.html"> list 1 column</a></li>
+                                    <li><a href="shop-list-2-col.html">list 2 column</a></li>
+                                    <li><a href="shop-list-box.html">list box style</a></li>
+                                    <li><a href="product-details.html">tab style 1</a></li>
+                                    <li><a href="product-details-2.html">tab style 2</a></li>
+                                    <li><a href="product-details-3.html"> tab style 3</a></li>
+                                    <li><a href="product-details-4.html">sticky style</a></li>
+                                    <li><a href="product-details-5.html">sticky style 2</a></li>
+                                    <li><a href="product-details-6.html">gallery style</a></li>
+                                    <li><a href="product-details-7.html">gallery style 2</a></li>
+                                    <li><a href="product-details-8.html">fixed image style</a></li>
+                                    <li><a href="product-details-9.html">fixed image style 2</a></li> -->
+                                </ul>
+                            </li>
+                            <li><a href="#">BLOG</a>
+                                <ul>
+                                    <li><a href="blog.html">blog 3 colunm</a></li>
+                                    <li><a href="blog-2-col.html">blog 2 colunm</a></li>
+                                    <li><a href="blog-sidebar.html">blog sidebar</a></li>
+                                    <li><a href="blog-details.html">blog details</a></li>
+                                    <li><a href="blog-details-sidebar.html">blog details 2</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html"> Contact </a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<!-- Modal login -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-lhabelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Đăng nhập</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span class="pe-7s-close" aria-hidden="true"></span>
+                </button> -->
+            </div>
+            <div class="modal-body" style="padding-bottom: 0px;">
+                <div class="form-group">
+                    <label for="kh_taikhoan" style="float: left;">Tên đăng nhập</label>
+                    <input [(ngModel)]="kh_taikhoan" (blur)="Validatecheck_nameDN()" type="text" id="kh_taikhoan" class="form-control"
+                        placeholder="User name" aria-describedby="helpUsname" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="l_Password" style="float: left;">Mật khẩu</label>
+                    <input [(ngModel)]="kh_matkhau" type="password" id="l_Password" class="form-control"
+                        placeholder="Password" aria-describedby="helpPass" required>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal"
+                    data-target="#RegisterModel">Đăng kí</button>
+                <button type="button" data-dismiss="modal" class="btn btn-primary" 
+                [disabled]="!(kh_taikhoan && kh_matkhau )"
+                (click)="loginNow()">Đăng
+                    nhập</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal register -->
+<div class="modal fade" id="RegisterModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Đăng kí</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-top: -20px;">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="padding-bottom: 0px;">
+
+                <div class="form-group" [class.has-error]="name.invalid && name.touched"
+                [class.has-success]="name.valid"
+                >
+                    <label for="fullname" class="control-label" style="float: left;">Họ và tên</label>
+                    <input [(ngModel)]="kh_tenkh" (blur)="  ValidateInputname()"  #name="ngModel"
+                    type="text" id="fullname" class="form-control" placeholder="Full name"
+                        required>
+                        <span class="help-block" *ngIf="name.invalid&& name.touched">Không để trống</span>
+
+                </div>
+       
+           
+                <!-- <div class="form-group">
+                    <label for="phone">Số điện thoại</label>
+                    <!-- <input [(ngModel)]="kh_sdt" (ngModelChange)="ValidateInputPhoneNumber()"  name="phone" type="tel" id="phone" class="form-control" -->
+
+                <div class="form-group"  [class.has-error]="phone.invalid && phone.touched"
+                [class.has-success]="phone.valid">
+                    <label for="phone">Số điện thoại</label>
+                    <input [(ngModel)]="kh_sdt" required phone  #phone="ngModel" (blur)="ValidateInputPhoneNumber()"  name="phone" type="tel" id="phone" class="form-control"
+
+                    type="number"
+                  placeholder="Phone number">
+                  <span class="help-block" *ngIf="phone.invalid&& phone.touched">
+                    không được để trống<br>
+                  </span>
+                        <!-- <input [(ngModel)]="kh_sdt"  name="phone" type="tel" id="phone" class="form-control" -->
+
+                </div>
+                <!-- số điệnt thoại -->
+
+
+                <div class="form-group" [class.has-error]="email.invalid && email.touched"
+                [class.has-success]="name.valid">
+                    <label for="email" style="float: left;">Email</label>
+                    <input [(ngModel)]="kh_email" required email (blur)="ValidateInputEmail()" 
+                    #email="ngModel"
+                    type="email" id="email" name="email" required class="form-control"
+                        placeholder="Email addess">
+                        <span class="help-block" *ngIf="email.invalid&& email.touched">
+                            Email không hợp lệ <br>
+                            Định dạng email như: hayyo@gmail.com
+
+                          </span>
+                          <!-- <span class="help-block" *ngIf="email.valid">
+                            Email hợp lệ
+                          </span> -->
+                </div>
+
+                <div class="form-group" >
+                    <label for="Address" style="float: left;">Địa chỉ</label>
+                    <input [(ngModel)]="kh_diachi" type="text" id="Address" class="form-control" placeholder="Địa chỉ"
+                        aria-describedby="helpAddress" required>
+                    <small id="helpAddress" class="text-muted">Nơi nhận hàng
+                        thường xuyên</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="userName" style="margin-right: 428px;width: 122px;">Tên đăng nhập</label>
+                    <input [(ngModel)]="kh_taikhoan" type="text" id="userName" class="form-control"
+                        placeholder="User name" aria-describedby="helpUsname" required>
+                    <small id="helpUsname" class="text-muted">Viết liền không
+                        dấu, 8-25 kí tự</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Mật khẩu</label>
+                    <input [(ngModel)]="kh_matkhau" (blur)="Validatecheck_antoan_matkhau()" type="password" id="password" class="form-control"
+                        placeholder="Password" aria-describedby="helpPass" required>
+                    <small id="helpPass" class="text-muted">6--8 kí
+                        tự, gồm CHỮ HOA, chữ thường, số</small>
+
+
+                    <div class="form-group">
+                        <label for="passwordCfm" style="margin-right: 81px;">Xác nhận mật khẩu</label>
+                        <input [(ngModel)]="kh_matkhau2" (blur)="Validatecheckpasswordgiongnhau()" type="password" id="passwordCfm" class="form-control"
+                            placeholder="Confirm password" required>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" class="btn btn-primary" onclick="refreshInputer()">
+                    Làm mới dữ liệu
+                </button>
+                <button [disabled]="!(kh_tenkh && kh_sdt  && kh_diachi && kh_taikhoan && kh_matkhau && kh_matkhau2)"
+                (click)="addUser()" type="submit" class="btn btn-primary">Đồng ý</button>            </div>
+        </div>
+    </div>
+</div>

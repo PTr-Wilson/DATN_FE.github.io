@@ -1,0 +1,101 @@
+<app-slide></app-slide>
+<div class="breadcrumb-area pt-120 pb-160" style="background-image: url(assets/bannertintuc.png)">
+    <div class="container">
+        <div class="breadcrumb-content text-center">
+            <!-- <h2>blog details with sidebar</h2>
+            <ul>
+                <li><a href="#">home</a></li>
+                <li>blog details with sidebar </li>
+            </ul> -->
+        </div>
+    </div>
+</div>
+<!-- shopping-cart-area start -->
+<div class="blog-details pt-95 pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4" style="border-right: 3px solid #a59999;">
+                <div class="shop-sidebar">
+                
+                  
+                    <!-- <div class="sidebar-widget mb-45">
+                        <h3 class="sidebar-title">Categories</h3>
+                        <div class="sidebar-categories">
+                            <ul>
+                                <li><a href="#">Accessories <span>4</span></a></li>
+                                <li><a href="#">Book <span>9</span></a></li>
+                                <li><a href="#">Clothing <span>5</span> </a></li>
+                                <li><a href="#">Homelife <span>3</span></a></li>
+                                <li><a href="#">Kids & Baby <span>4</span></a></li>
+                            </ul>
+                        </div>
+                    </div> -->
+                    <div class="sidebar-widget mb-50">
+                        <h3 class="sidebar-title">Bài viết gần đây</h3>
+                        <div class="sidebar-top-rated-all">
+                            <div class="sidebar-top-rated mb-30" *ngFor="let item of dstinganday.slice(0,3)" >
+                                <div class="single-top-rated">
+                                    <div class="top-rated-img">
+                                        <a href="#"><img src="" alt=""></a>
+                                    </div>
+                                    <div class="top-rated-text">
+                                        <!-- <h5><a [innerHTML]=item.TIEUDE  style="font-size: 15px;"> </a></h5> -->
+                                        <div  >
+                                            <h4><a (click)="chitiettintuc(item)" [innerHTML]=item.TIEUDE></a></h4>
+                                    <!-- <a class="blog-btn btn-hover" (click)="chitiettintuc(item)">Đọc thêm</a> -->
+                                        </div>
+                                        <div class="top-rated-rating">
+                                            <!-- <span>
+                                                {{item.TENLOAITIN}}
+                                            </span> -->
+                                        </div>
+                                        <span>{{item.NGAYDANG|date}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                     
+                        </div>
+                    </div>
+                    <div class="sidebar-widget mb-45">
+                        <h3 class="sidebar-title">Chủ đề</h3>
+                        <div class="blog-tags-style">
+                            <ul>
+                                <li class="active" data-filter="*"  *ngFor="let item of loaitintuc">
+                                    <a href="/tintuc" routerLinkActive="router-link-active"  (click)="chitiettintuc(item.LoaiTinID)">{{item.TENLOAITIN}}</a></li>
+                      
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="blog-details-info" >
+                    <div class="blog-meta">
+                        <ul>
+                            <li>Ngày Đăng </li>
+                            <li > {{ NGAYDANG|date}}</li>
+                        </ul>
+                    </div>
+                    <h3 [innerHTML]=TIEUDE> </h3>
+                    <img src="{{PrdImgPath}}{{IMAGE}}" alt="">
+                    <div class="blog-feature">
+                          <p class="blog-pera-mrg" [innerHTML]=NOIDUNG>
+                            
+                          </p>
+                          <a href="#" class="view-more">View more</a>
+                        </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const viewMoreButton = document.querySelector('.view-more');
+const hiddenText = document.querySelector('.blog-pera-mrg');
+
+viewMoreButton.addEventListener('click', function(event) {
+  event.preventDefault();
+  hiddenText.style.display = (hiddenText.style.display === 'none') ? 'block' : 'none';
+});
+</script>

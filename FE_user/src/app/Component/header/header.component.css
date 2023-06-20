@@ -1,0 +1,50 @@
+.modal-body {
+    display: block;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+
+
+.menu-overflow>ul li {
+    border-radius: 50px;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 19px;
+    margin-right: 10px;
+    position: relative;
+    transition: all 0.4s ease 0s;
+    width: 19px;
+}
+
+.menu-overflow9>ul li a {
+    border-radius: 50px;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 19px;
+    margin-right: 10px;
+    position: relative;
+    transition: all 0.4s ease 0s;
+    width: 19px;
+}
+
+.menu-overflow9>ul li {
+    border-radius: 50px;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 19px;
+    margin-right: 10px;
+    position: relative;
+    transition: all 0.4s ease 0s;
+    width: 19px;
+}
+.help-block{
+    color: red;
+}
+
+    .has-success {
+        border-color: green;
+      }

@@ -1,0 +1,138 @@
+<app-slide></app-slide>
+<div class="breadcrumb-area pt-100 pb-160" style="background-image: url(assets/bannertintuc.png)">
+    <div class="container">
+        <div class="breadcrumb-content text-center">
+            <!-- <h2>blog sidebar</h2>
+            <ul>
+                <li><a href="#">home</a></li>
+                <li> blog sidebar </li>
+            </ul> -->
+        </div>
+    </div>
+</div>
+<!-- shopping-cart-area start -->
+<div class="blog-area pt-95 pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4" style="border-right: 3px solid #a59999;">
+                <div class="shop-sidebar">
+                    <!-- <div class="sidebar-widget mb-50">
+                        <img src="assets/img/blog/blog-sidebar.jpg" alt="">
+                        <div class="sidebar-img-content">
+                            <p>On the other hand, dislike men who are so beguiled and the demoralized by the charms of pleasure of the moment.</p>
+                            <h4>Tayeb rayed</h4>
+                            <span>UI UX Designer</span>
+                            <div class="sidebar-img-social">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icofont icofont-social-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icofont icofont-social-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icofont icofont-social-pinterest"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icofont icofont-social-flikr"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="sidebar-widget mb-50">
+                        <h3 class="sidebar-title">Search Products</h3>
+                        <div class="sidebar-search">
+                            <form action="#">
+                                <input placeholder="Search Products..." type="text">
+                                <button><i class="ti-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- <div class="sidebar-widget mb-45">
+                        <h3 class="sidebar-title">Categories</h3>
+                        <div class="sidebar-categories">
+                            <ul>
+                                <li><a href="#">Accessories <span>4</span></a></li>
+                                <li><a href="#">Book <span>9</span></a></li>
+                                <li><a href="#">Clothing <span>5</span> </a></li>
+                                <li><a href="#">Homelife <span>3</span></a></li>
+                                <li><a href="#">Kids & Baby <span>4</span></a></li>
+                            </ul>
+                        </div>
+                    </div> -->
+                    <div class="sidebar-widget mb-50">
+                        <h3 class="sidebar-title">Bài viết gần đây</h3>
+                        <div class="sidebar-top-rated-all">
+                            <div class="sidebar-top-rated mb-30" *ngFor="let item of dstinganday.slice(0,3)" >
+                                <div class="single-top-rated">
+                                    <div class="top-rated-img">
+                                        <a href="#"><img src="" alt=""></a>
+                                    </div>
+                                    <div class="top-rated-text">
+                                        <!-- <h5><a [innerHTML]=item.TIEUDE  style="font-size: 15px;"> </a></h5> -->
+                                        <h4><a (click)="chitiettintuc(item)" [innerHTML]=item.TIEUDE></a></h4>
+                                                  <div class="top-rated-rating">
+                                            <!-- <span>
+                                                {{item.TENLOAITIN}}
+                                            </span> -->
+                                        </div>
+                                        <span>{{item.NGAYDANG|date}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                     
+                        </div>
+                    </div>
+                    <div class="sidebar-widget mb-45">
+                        <h3 class="sidebar-title">Chủ đề</h3>
+                        <div class="blog-tags-style">
+                            <ul>
+                                <li class="active" data-filter="*"  *ngFor="let item of loaitintuc">
+                                    <a href="/tintuc" routerLinkActive="router-link-active"  (click)="locTinTuc(item.LoaiTinID)">{{item.TENLOAITIN}}</a></li>
+                      
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="blog-mesonry">
+                    <div class="row grid">
+                        <div class="col-lg-6 col-md-6 grid-item" *ngFor="let item of listBlogs| paginate : { itemsPerPage: 6, currentPage: page, totalItems: totalLength};">
+                            <div class="blog-wrapper mb-40">
+                                <div class="blog-img mb-15">
+                                    <a href="#"><img src="http://localhost:44316/photos/{{item.IMAGE}}" alt=""></a>
+                                </div>
+                                <div class="blog-info-wrapper">
+                                    <div class="blog-meta">
+                                        <ul>
+                                            <li><a href="#"> Ngày đăng</a></li>
+                                            <li>{{item.NGAYDANG|date}}</li>
+                                        </ul>
+                                    </div>
+                                    <h4><a (click)="chitiettintuc(item)" [innerHTML]=item.TIEUDE></a></h4>
+                                    <a class="blog-btn btn-hover" (click)="chitiettintuc(item)">Đọc thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination-style mt-30 text-center">
+                            <pagination-controls  previousLabel=" "
+                            nextLabel=""
+                            (pageChange)="page = $event" ></pagination-controls>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+</div>

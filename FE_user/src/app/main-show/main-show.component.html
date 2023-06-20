@@ -1,0 +1,664 @@
+<style>
+   
+    .categori-menu-wrapper2.clearfix {
+        display: none;}
+    </style> 
+<div class="pl-200 pr-200 overflow clearfix">
+    <div class="categori-menu-slider-wrapper clearfix">
+        <div class="categories-menu">
+            <div class="category-heading">
+                <h3> Danh mục<i class="pe-7s-angle-down"></i></h3>
+            </div>
+            <div class="category-menu-list">
+                <ul>
+                    <li>
+                        <a href="#"><img alt="" src="assets/img/icon-img/5.png">Thể loại sách <i
+                                class="pe-7s-angle-right"></i></a>
+                        <div class="category-menu-dropdown">
+                            <div class="category-dropdown-style category-common4 mb-40">
+                                <!-- <li class="active" data-filter="*"  *ngFor="let item of dsLoaiSP.slice(6, 10)">
+                                    <a (click)="locSP(item.IDLOAI)">{{item.TENLOAI}}</a></li> -->
+                                <h4 class="categories-subtitle"> Danh sách 1</h4>
+                                <ul >
+                                    <li class="active" data-filter="*"  *ngFor="let item of dsLoaiSP.slice(5, 10)">
+                                        <a (click)="locSP(item.IDLOAI)"  onclick="scrollToTop()">{{item.TENLOAI}}</a></li>
+                                  
+                                </ul>
+                            </div>
+                            <div class="category-dropdown-style category-common4 mb-40">
+                                <h4 class="categories-subtitle"> Danh sách 2</h4>
+                                <ul>
+                                    <li class="active" data-filter="*"  *ngFor="let item of dsLoaiSP.slice(6, 10)">
+                                        <a (click)="locSP(item.IDLOAI)"  onclick="scrollToTop()">{{item.TENLOAI}}</a></li>
+                                </ul>
+                            </div>
+                        
+                            <div class="mega-banner-img">
+                                <a href="single-product.html">
+                                    <img src="assets/banner1/HoaCuQuy4_banner_310x210_2.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+           
+                </ul>
+            </div>
+        </div>
+        <div class="menu-slider-wrapper">
+            <div class="menu-style-3 menu-hover text-center">
+                <nav>
+                    <ul>
+                        <li><a href="index.html"  onclick="scrollToTop()">Trang chủ  
+                            <!-- <span
+                                    class="sticker-new">hot</span> -->
+                                </a>
+                            <!-- <ul class="single-dropdown">
+                                <li><a href="index.html">Fashion</a></li>
+                                <li><a href="index-fashion-2.html">Fashion style 2</a></li>
+                                <li><a href="index-fruits.html">fruits</a></li>
+                                <li><a href="index-book.html">book</a></li>
+                                <li><a href="index-electronics.html">electronics</a></li>
+                                <li><a href="index-electronics-2.html">electronics style 2</a></li>
+                                <li><a href="index-food.html">food & drink</a></li>
+                                <li><a href="index-furniture.html">furniture</a></li>
+                                <li><a href="index-handicraft.html">handicraft</a></li>
+                                <li><a target="_blank" href="index-smart-watch.html">smart watch</a></li>
+                                <li><a href="index-sports.html">sports</a></li>
+                            </ul> -->
+                        </li>
+                       
+                        <!-- <li class="active" data-filter="*"  *ngFor="let item of dsLoaiSP">
+                            <a (click)="locSP(item.IDLOAI)">{{item.TENLOAI}}</a></li> -->
+                        <li><a href="#">Theo loại <i class="pe-7s-angle-down"></i> <span
+                                    class="sticker-new">hot</span></a>
+                            <div class="category-menu-dropdown shop-menu">
+                                <div class="category-dropdown-style category-common2 mb-30">
+                                    <h4 class="categories-subtitle">Danh sách 1</h4>
+                                    <ul>
+                                        <li class="active" data-filter="*"  *ngFor="let item of dsLoaiSP.slice(0, 5)">
+                                        <a href="/loaisanpham" routerLinkActive="router-link-active"  (click)="locSP(item.IDLOAI)"  onclick="scrollToTop()">{{item.TENLOAI}}</a></li>
+                                        <!-- <li><a >blog 3 colunm</a></li> -->
+                                         <!-- <li><a href="shop-grid-2-col.html"> grid 2 column</a></li>
+                                        <li><a href="shop-grid-3-col.html"> grid 3 column</a></li>
+                                        <li><a href="shop.html">grid 4 column</a></li>
+                                        <li><a href="shop-grid-box.html">grid box style</a></li>
+                                        <li><a href="shop-list-1-col.html"> list 1 column</a></li>
+                                        <li><a href="shop-list-2-col.html">list 2 column</a></li>
+                                        <li><a href="shop-list-box.html">list box style</a></li>
+                                        <li><a href="cart.html">shopping cart</a></li>
+                                        <li><a href="wishlist.html">wishlist</a></li> -->
+                                    </ul>
+                                </div>
+                                <div class="category-dropdown-style category-common2 mb-30">
+                                    <h4 class="categories-subtitle"> Danh sách 2</h4>
+                                    <ul>
+                                        <li class="active" data-filter="*"  *ngFor="let item of dsLoaiSP.slice(5, 10)">
+                                            <a  href="/loaisanpham"  (click)="locSP(item.IDLOAI)"  onclick="scrollToTop()">{{item.TENLOAI}}</a></li>
+                                   
+                                    </ul>
+                                </div>
+                                <div class="mega-banner-img">
+                                    <a href="single-product.html">
+                                        <img src="assets/banner1/FahasaT1222_Bộ2_310x210PNG.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="/tintuc">Tin Tức <i class="pe-7s-angle-down"></i> 
+                            <!-- <span
+                            class="sticker-new">hot</span> -->
+                        </a>
+                    <ul class="single-dropdown">
+                        <li class="active" data-filter="*"  *ngFor="let item of loaitintuc">
+                            <a routerLink="/tintuc" routerLinkActive="router-link-active"  (click)="locTinTuc(item.LoaiTinID)"  onclick="scrollToTop()">{{item.TENLOAITIN}}</a></li>
+                    </ul>
+                </li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="slider-area">
+                <div class="slider-active owl-carousel">
+                    <div class="single-slider single-slider-hm3 bg-img pt-170 pb-173"
+                        style="background-image: url(assets/img/banner/1_1.jpg)">
+                        <div class="slider-animation slider-content-style-3 fadeinup-animated">
+                            <h2 class="animated">Nhà sách Hồ Gươm <br>Sản phẩm riêng</h2>
+                            <h4 class="animated">Nơi được gửi gắm niềm tin </h4>
+                            <a class="electro-slider-btn btn-hover" href="product-details.html">buy now</a>
+                        </div>
+                    </div>
+                    <div class="single-slider single-slider-hm3 bg-img pt-170 pb-173"
+                        style="background-image: url(assets/img/banner/1_2.jpg)">
+                        <div class="slider-animation slider-content-style-3 fadeinup-animated">
+                         <h2 class="animated">Nhà sách Hồ Gươm <br>Sản phẩm riêng</h2>
+                            <h4 class="animated">Nơi được gửi gắm niềm tin </h4>
+                            <a class="electro-slider-btn btn-hover" href="product-details.html">buy now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="electronic-banner-area">
+    <div class="custom-row-2">
+        <div class="custom-col-style-2 electronic-banner-col-3 mb-30">
+            <div class="electronic-banner-wrapper">
+                <img src="assets/banner1/FahasaT1222_Bộ2_310x210PNG.png" alt="">
+                <div class="electro-banner-style electro-banner-position">
+                    <!-- <h1>Live 4K! </h1> -->
+                    <!-- <h2>up to 20% off</h2> -->
+                    <!-- <h4>Amazon exclusives</h4> -->
+                    <a href="product-details.html">Buy Now→</a>
+                </div>
+            </div>
+        </div>
+        <div class="custom-col-style-2 electronic-banner-col-3 mb-30">
+            <div class="electronic-banner-wrapper">
+                <img src="assets/banner1/HoaCuQuy4_banner_310x210_2.jpg" alt="">
+                <div class="electro-banner-style electro-banner-position2">
+                    <!-- <h2>up to 15% off</h2> -->
+                    <!-- <h4>Amazon exclusives</h4> -->
+                    <a href="product-details.html">Buy Now→</a>
+                </div>
+            </div>
+        </div>
+        <div class="custom-col-style-2 electronic-banner-col-3 mb-30">
+            <div class="electronic-banner-wrapper">
+                <img src="assets/banner1/VNPAYT1222_FahasaDay2112_310x210PNG_4.png" alt="">
+                <div class="electro-banner-style electro-banner-position3">
+                    <!-- <h1>BY Laptop</h1> -->
+                    <!-- <h2>Super Discount</h2> -->
+                    <!-- <h4>Amazon exclusives</h4> -->
+                    <a href="product-details.html">Buy Now→</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="electro-product-wrapper wrapper-padding pt-95 pb-45">
+
+</div> -->
+   <!-- product area start -->
+   <div class="product-style-area pt-130 pb-30 wow fadeInUp">
+    <div class="container">
+        <div class="section-title-furits text-center mb-95">
+            <img src="assets/img/icon-img/49.png" alt="">
+            <h2>Sản phẩm mới</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-xl-3 col-md-6" *ngFor="let item of listHotest">
+                <div class="product-fruit-wrapper mb-60">
+                    <div class="product-fruit-img">
+                        <img src="http://localhost:44316/photos/{{item.IMAGE}}" alt=""
+                        style="height: 290px;width:  270px">                        <div class="product-furit-action">
+                            <a class="furit-animate-left" title="Add To Cart" (click)="addToCart(item)">
+                                <i class="pe-7s-cart"></i>
+                            </a>
+                            <a class="furit-animate-right" title="Wishlist" href="#">
+                                <i class="pe-7s-like"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-fruit-content text-center">
+                        <!-- routerLink="/chitiet" routerLinkActive="router-link-active" (click)="chitiet(item)" -->
+                        <h4><a href="/chitiet" routerLinkActive="router-link-active" (click)="chitiet(item)" onclick="scrollToTop()" >{{item.TENSP}}</a></h4>
+                        <span>{{item.GIABAN | currency:'VNĐ ':'symbol':'1.0-0'}}</span>
+                    </div>
+                </div>
+            </div>
+       
+        </div>
+    </div>
+</div>
+<!-- main shpw -->
+
+
+<div class="banner-area wrapper-padding pt-30 pb-95">
+    <div class="container-fluid">
+        <div class="electro-fexible-banner bg-img" style="background-image: url(assets/banner1/ms_banner_img3.webp)">
+            <div class="fexible-content">
+                <!-- <h3>Play with flexible</h3>
+                <p>Multicontrol Smooth Controller, Black Color All Buttons
+                    <br>are somooth, Super Shine.
+                </p> -->
+                <a class="btn-hover flexible-btn" href="product-details.html">Buy Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+ <!-- top-seller area start -->
+ <div class="fruits-top-seller-area pt-125">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="top-seller-wrapper mb-40">
+                    <div class="top-seller-title">
+                        <span></span>
+                        <h3>Sách Ngôn tình </h3>
+                        <img src="assets/img/icon-img/56.png" alt="">
+                    </div>
+                    <div class="top-seller-contect-wrapper" >
+                        <div class="single-top-seller" *ngFor="let item of lis_ngongu.slice(0,3)" >
+                            <div class="top-seller-img" >
+                                <a href="#">
+                                    <img src="http://localhost:44316/photos/{{item.IMAGE}}"
+                                    style="    height: 130px;width: 120px;" alt=""></a>
+                            </div>
+                            <div class="top-seller-content">
+                                <h5><a href="/chitiet" routerLinkActive="router-link-active" (click)="chitiet(item)" onclick="scrollToTop()" >{{item.TENSP}}</a></h5>
+                                <!-- <h4><a href="/chitiet" routerLinkActive="router-link-active" (click)="chitiet(item)" onclick="scrollToTop()" >{{item.TENSP}}</a></h4> -->
+
+                                <div class="fruit-price">
+                                    <span>{{item.GIABAN | currency:'VNĐ ':'symbol':'1.0-0'}}</span>
+                                    <span class="old">$25.22</span>
+                                </div>
+                                <a (click)="addToCart(item)">Add to cart →</a>
+                            </div>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="top-seller-wrapper mb-40">
+                    <div class="top-seller-title">
+                        <span></span>
+                        <h3>Sách giá rẻ</h3>
+                        <img src="assets/img/icon-img/56.png" alt="">
+                    </div>
+                    <div class="top-seller-contect-wrapper">
+                        <div class="single-top-seller"  *ngFor="let item of listSmallPrice.slice(0,3)">
+                            <div class="top-seller-img">
+                                <a href="#"><img src="http://localhost:44316/photos/{{item.IMAGE}}"
+                                    style="    height: 130px;width: 120px;" alt=""></a>
+                            </div>
+                            <div class="top-seller-content">
+                                <h5><a href="/chitiet" routerLinkActive="router-link-active" (click)="chitiet(item)"  onclick="scrollToTop()">{{item.TENSP}}</a></h5>
+                                <div class="fruit-price">
+                                    <span>{{item.GIABAN | currency:'VNĐ ':'symbol':'1.0-0'}}</span>
+                                    <span class="old">$25.22</span>
+                                </div>
+                                <a (click)="addToCart(item)">Add to cart →</a>
+                            </div>
+                        </div>
+                     
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="top-seller-wrapper mb-40">
+                    <div class="top-seller-title">
+                        <span></span>
+                        <h3>Sách trẻ nhỏ</h3>
+                        <img src="assets/img/icon-img/56.png" alt="">
+                    </div>
+                    <div class="top-seller-contect-wrapper">
+                        <div class="single-top-seller" *ngFor="let item of listNewest.slice(0,3)">
+                            <div class="top-seller-img">
+                                <a href="#"><img src="http://localhost:44316/photos/{{item.IMAGE}}"
+                                    style="    height: 130px;width: 120px;" alt=""></a>
+                            </div>
+                            <div class="top-seller-content">
+                                <h5><a href="/chitiet" routerLinkActive="router-link-active"  (click)="chitiet(item)"  onclick="scrollToTop()">{{item.TENSP}}</a></h5>
+                                <div class="fruit-price">
+                                    <span>{{item.GIABAN | currency:'VNĐ ':'symbol':'1.0-0'}}</span>
+                                    <span class="old">$25.22</span>
+                                </div>
+                                <a (click)="addToCart(item)">Add to cart →</a>
+                            </div>
+                        </div>
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /// -->
+<div class="banner-area wrapper-padding pt-30 pb-95">
+    <div class="container-fluid">
+        <div class="electro-fexible-banner bg-img" style="background-image: url(assets/img/ctav5.jpg)">
+            <div class="fexible-content">
+                <!-- <h3>Play with flexible</h3>
+                <p>Multicontrol Smooth Controller, Black Color All Buttons
+                    <br>are somooth, Super Shine.
+                </p> -->
+                <a class="btn-hover flexible-btn" href="product-details.html">Buy Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+  <!-- product area start -->
+  <div class="popular-product-area wrapper-padding-4 pt-45 ptb-95">
+    <div class="container">
+        <div class="section-title-9 text-center mb-50">
+            <h2>Tất cả các sản phẩm</h2>
+            <p></p>
+        </div>
+        <div class="product-style">
+            <div class="popular-product-active-2 owl-carousel">
+                <div class="product-wrapper"*ngFor="let item of listall">
+                    <div class="product-img">
+                        <a href="#"><img src="http://localhost:44316/photos/{{item.IMAGE}}"
+                            style="    height: 250px;width: 220px;" alt=""></a>
+                        <div class="product-action">
+                            <a class="animate-left" title="Wishlist" href="#">
+                                <i class="pe-7s-like"></i>
+                            </a>
+                            <a class="animate-top" title="Add To Cart" (click)="addToCart(item)">
+                                <i class="pe-7s-cart"></i>
+                            </a>
+                            <a class="animate-right" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                                <i class="pe-7s-look"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="funiture-product-content text-center" style="width: 220px;">
+                        <h5><a href="/chitiet" routerLinkActive="router-link-active"  (click)="chitiet(item)"  onclick="scrollToTop()">{{item.TENSP}}</a></h5>
+                        <span>{{item.GIABAN|number}} VNĐ</span>
+                    </div>
+                </div>
+         
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="best-selling-area pb-95">
+    <div class="section-title-4 text-center mb-60">
+        <h2>Best Selling</h2>
+    </div>
+    <div class="best-selling-product">
+        <div class="row g-0">
+            <div class="col-lg-5" *ngFor="let item of listBigPrice">
+                <div class="best-selling-left">
+                    <div class="product-wrapper">
+                        <div class="product-img-4">
+                            <a href="#"><img src="http://localhost:44316/photos/{{item.IMAGE}}"
+                                    style="    height: 500px;width: 850px;" alt=""></a>
+                            <div class="product-action-right">
+                                <a  (click)="addToCart(item)" class="animate-top" title="Add To Cart">
+                                    <i class="pe-7s-cart"></i>
+                                </a>
+                                <a class="animate-left" title="Wishlist" href="#">
+                                    <i class="pe-7s-like"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-content-5 text-center">
+                         
+                        </div>
+                        <p></p>
+                        <p></p>
+                        <div style="    margin-left: 101px;
+                        ">
+                            <h4 style="text-align:center ;"><a
+                                    href="product-details.html"><strong>{{item.TENSP}}</strong></a></h4>
+
+                            <h3 style="text-align:center ;">{{item.GIABAN | currency:'VNĐ ':'symbol':'3.1-1':'fr'}}</h3>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="best-selling-right">
+                    <div class="custom-container">
+                        <div class="coustom-row-3">
+                            <div class="custom-col-style-3 custom-col-3"  *ngFor="let item of listSmallPrice">
+                                <div class="product-wrapper mb-6">
+                                    <div class="product-img-4">
+                                        <a href="#"><img src="http://localhost:44316/photos/{{item.IMAGE}}"
+                                            style="    height: 285px;width: 297px;" alt=""></a>
+                                        <div class="product-action-right">
+                                            <a (click)="addToCart(item)" class="animate-top" title="Add To Cart">
+                                                <i class="pe-7s-cart"></i>
+                                            </a>
+                                            <a class="animate-left" title="Wishlist" href="#">
+                                                <i class="pe-7s-like"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product-content-6">
+                                        <div class="product-rating-4">
+                                            <i class="icofont icofont-star yellow"></i>
+                                            <i class="icofont icofont-star yellow"></i>
+                                            <i class="icofont icofont-star yellow"></i>
+                                            <i class="icofont icofont-star yellow"></i>
+                                            <i class="icofont icofont-star yellow"></i>
+                                        </div>
+                                        <h4><a href="product-details.html">{{item.TENSP}}</a></h4>
+                                        <h5>{{item.GIABAN | currency:'VNĐ ':'symbol':'3.1-1':'fr'}}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="androit-banner-wrapper wrapper-padding pb-175">
+    <div class="container-fluid">
+        <div class="androit-banner-img bg-img" style="background-image: url(assets/banner1/ms_banner_img2.jpg)">
+            <div class="androit-banner-content">
+                <h3>Các sản phẩm sale vòa thứ 2 <br></h3>
+                <a href="product-details.html">Buy Now →</a>
+            </div>
+            <div class="banner-price text-center">
+                <div class="banner-price-position">
+                    <span class="banner-price-new">200.000</span>
+                    <span class="banner-price-old">99.000</span>
+                </div>
+            </div>
+            <!-- <div class="phn-img">
+                <img src="assets/img/banner/10.png" alt="">
+            </div> -->
+        </div>
+    </div>
+</div>
+<div class="product-area-2 wrapper-padding pb-70">
+    <h2 style="text-align: center;"> Sách cho trẻ </h2>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- lay ngon ngu -->
+            <div class="col-lg-6 col-xl-4" *ngFor="let item of lis_ngongu.slice(0, 6)">
+                <div class="product-wrapper product-wrapper-border mb-30">
+                    <div class="product-img-5">
+                        <a href="#">
+                            <img src="http://localhost:44316/photos/{{item.IMAGE}}"
+                            style="    height: 140px;width: 140px;" alt=""></a>
+                    </div>
+                    <div class="product-content-7">
+                        <h4><a routerLink="/chitiet" routerLinkActive="router-link-active" (click)="chitiet(item)"  onclick="scrollToTop()">{{item.TENSP.substring(0,22)}}...</a></h4>
+                        <div class="product-rating-4">
+                            <i class="icofont icofont-star yellow"></i>
+                            <i class="icofont icofont-star yellow"></i>
+                            <i class="icofont icofont-star yellow"></i>
+                            <i class="icofont icofont-star yellow"></i>
+                            <i class="icofont icofont-star"></i>
+                        </div>
+                        <h4>{{item.GIABAN | currency:'VNĐ ':'symbol':'1.0-0'}}</h4>
+                        <div class="product-action-electro">
+                            <a class="animate-top" (click)="addToCart(item)"  title="Add To Cart">
+                                <i class="pe-7s-cart"></i>
+                            </a>
+                            <a class="animate-left" title="Wishlist" href="#">
+                                <i class="pe-7s-like"></i>
+                            </a>
+                            <a class="animate-right" title="Compare" data-bs-toggle="modal"
+                                data-target="#exampleCompare" href="#">
+                                <i class="pe-7s-repeat"></i>
+                            </a>
+                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+               
+        </div>
+    </div>
+</div>
+<!-- <div class="brand-logo-area-2 wrapper-padding ptb-80">
+    <div class="container-fluid">
+        <div class="brand-logo-active2 owl-carousel">
+            <div class="single-brand">
+                <img src="assets/img/brand-logo/7.png" alt="">
+            </div>
+            <div class="single-brand">
+                <img src="assets/img/brand-logo/8.png" alt="">
+            </div>
+            <div class="single-brand">
+                <img src="assets/img/brand-logo/9.png" alt="">
+            </div>
+            <div class="single-brand">
+                <img src="assets/img/brand-logo/10.png" alt="">
+            </div>
+            <div class="single-brand">
+                <img src="assets/img/brand-logo/11.png" alt="">
+            </div>
+            <div class="single-brand">
+                <img src="assets/img/brand-logo/12.png" alt="">
+            </div>
+            <div class="single-brand">
+                <img src="assets/img/brand-logo/13.png" alt="">
+            </div>
+            <div class="single-brand">
+                <img src="assets/img/brand-logo/7.png" alt="">
+            </div>
+            <div class="single-brand">
+                <img src="assets/img/brand-logo/8.png" alt="">
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="newsletter-area ptb-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-6">
+                <div class="section-title-5">
+                    <h2>liên lạc sau</h2>
+                    <p>Đăng nhập để lại lời nhắn <span></span></p>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6">
+                <div class="newsletter-style-3">
+                    <div id="mc_embed_signup" class="subscribe-form-3 pr-50">
+                        <form
+                            action="https://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef"
+                            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                            class="validate" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll" class="mc-form">
+                                <input type="email" value="" name="EMAIL" class="email" placeholder="Enter Your E-mail"
+                                    required>
+                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div class="mc-news" aria-hidden="true">
+                                    <input type="text" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1"
+                                        value="">
+                                </div>
+                                <div class="clear">
+                                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                                        class="button">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+        <span class="pe-7s-close" aria-hidden="true"></span>
+    </button>
+    <div class="modal-dialog modal-quickview-width" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="qwick-view-left">
+                    <div class="quick-view-learg-img">
+                        <div class="quick-view-tab-content tab-content">
+                            <div class="tab-pane active show fade" id="modal1" role="tabpanel">
+                                <img src="assets/img/quick-view/l1.jpg" alt="">
+                            </div>
+                            <div class="tab-pane fade" id="modal2" role="tabpanel">
+                                <img src="assets/img/quick-view/l2.jpg" alt="">
+                            </div>
+                            <div class="tab-pane fade" id="modal3" role="tabpanel">
+                                <img src="assets/img/quick-view/l3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quick-view-list nav" role="tablist">
+                        <a class="active" href="#modal1" data-bs-toggle="tab" role="tab">
+                            <img src="assets/img/quick-view/s1.jpg" alt="">
+                        </a>
+                        <a href="#modal2" data-bs-toggle="tab" role="tab">
+                            <img src="assets/img/quick-view/s2.jpg" alt="">
+                        </a>
+                        <a href="#modal3" data-bs-toggle="tab" role="tab">
+                            <img src="assets/img/quick-view/s3.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="qwick-view-right">
+                    <div class="qwick-view-content">
+                        <h3>Handcrafted Supper Mug</h3>
+                        <div class="price">
+                            <span class="new">$90.00</span>
+                            <span class="old">$120.00  </span>
+                        </div>
+                        <div class="rating-number">
+                            <div class="quick-view-rating">
+                                <i class="pe-7s-star"></i>
+                                <i class="pe-7s-star"></i>
+                                <i class="pe-7s-star"></i>
+                                <i class="pe-7s-star"></i>
+                                <i class="pe-7s-star"></i>
+                            </div>
+                            <div class="quick-view-number">
+                                <span>2 Ratting (S)</span>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adip elit, sed do tempor incididun ut labore et dolore magna aliqua. Ut enim ad mi , quis nostrud veniam exercitation .</p>
+                        <div class="quick-view-select">
+                            <div class="select-option-part">
+                                <label>Size*</label>
+                                <select class="select">
+                                    <option value="">- Please Select -</option>
+                                    <option value="">900</option>
+                                    <option value="">700</option>
+                                </select>
+                            </div>
+                            <div class="select-option-part">
+                                <label>Color*</label>
+                                <select class="select">
+                                    <option value="">- Please Select -</option>
+                                    <option value="">orange</option>
+                                    <option value="">pink</option>
+                                    <option value="">yellow</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="quickview-plus-minus">
+                            <div class="cart-plus-minus">
+                                <input type="text" value="02" name="qtybutton" class="cart-plus-minus-box">
+                            </div>
+                            <div class="quickview-btn-cart">
+                                <a class="btn-hover-black" href="#">add to cart</a>
+                            </div>
+                            <div class="quickview-btn-wishlist">
+                                <a class="btn-hover" href="#"><i class="pe-7s-like"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

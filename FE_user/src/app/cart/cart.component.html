@@ -1,0 +1,430 @@
+<app-slide></app-slide>
+
+<section id="wrapper">
+  <div data-depth="1" class="breadcrumb-bg brcenter " style=" background-color:#f6f6f6; min-height:50px; ">
+    <nav data-depth="1" class="breadcrumb hidden-sm-down">
+      <ol itemscope="" itemtype="http://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <a itemprop="item" href="https://demo3.leotheme.com/prestashop/leo_bookery_demo/en/">
+            <span itemprop="name">Giỏ hàng</span>
+          </a>
+          <meta itemprop="position" content="1">
+        </li>
+      </ol>
+    </nav>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div id="content-wrapper" class="col-lg-12 col-xs-12">
+        <section id="main">
+          <div class="cart-grid row">
+
+            <div class="cart-grid-body col-xs-12 col-lg-8">
+
+              <div class="card cart-container">
+                <div class="card-block">
+                  <h1 class="h1">Giỏ hàng</h1>
+                </div>
+                <hr class="separator">
+
+                <!-- begin checkout/_partials/cart-detailed.tpl -->
+
+
+                <!-- begin checkout/_partials/cart-detailed.tpl -->
+
+                <div class="cart-overview js-cart"
+                  data-refresh-url="//demo3.leotheme.com/prestashop/leo_bookery_demo/en/cart?ajax=1&amp;action=refresh">
+                  <ul class="cart-items">
+                    <li class="cart-item" *ngFor="let item of products">
+                      <div class="product-line-grid row">
+                        <!--  product line left content: image-->
+                        <div class="product-line-grid-left col-md-3 col-xs-4">
+                          <span class="product-image media-middle">
+                            <img src="{{prdPhotoPath}}{{item.IMAGE}}" style="width: 125px;height:125px"
+                              alt="The Song of Achilles">
+                          </span>
+                        </div>
+
+                        <!--  product line body: label, discounts, price, attributes, customizations -->
+                        <div class="product-line-grid-body col-md-4 col-xs-8">
+                          <div class="product-line-info_1">
+                            <a class="ten_sp" data-id_customization="0">{{item.TENSP}}</a>
+                          </div>
+                          <br>
+                          <div class="product-line-info product-price h5 ">
+                            <div class="current-price">
+                              <span class="price" style="font-size: 14px;">{{item.GIABAN | currency : 'vnd ' : 'symbol'
+                                : '1.0-0' }}</span>
+                            </div>
+                          </div>
+
+                          <br>
+
+                          <div class="product-line-info dimension">
+                            <span class="label">Tác giả : {{item.TENTG}}</span>
+                            <!-- <span class="value">40x60cm</span> -->
+                          </div>
+
+                        </div>
+
+                        <!--  product line right content: actions (quantity, delete), price -->
+                        <div class="product-line-grid-right product-line-actions col-md-5 col-xs-12">
+                          <div class="row">
+                            <div class="col-xs-4 hidden-md-up"></div>
+                            <div class="col-md-10 col-xs-6">
+                              <div class="row">
+                                <div class="col-md-5 col-xs-6 col-sp-12 qty">
+                                  <div class="input-group bootstrap-touchspin">
+                                    <span class="input-group-addon bootstrap-touchspin-prefix" style="display: none;">
+                                    </span>
+                                    <input class="js-cart-line-product-quantity form-control" type="number"
+                                    (change)="change(item.SanPhamID,item.Quantity,item.SOLUONGTON)" [(ngModel)]="item.Quantity"  name="product-quantity-spin" style="display: block;">
+                                    <span class="input-group-addon bootstrap-touchspin-postfix"
+                                      style="display: none;"></span>
+                                    <span class="input-group-btn-vertical">
+                                      <!-- <button
+                                        class="btn btn-touchspin js-touchspin js-increase-product-quantity bootstrap-touchspin-up"
+                                        type="button" (click)="updateProduct(item.SanPhamID,item.Quantity+1)"> -->
+                                      <!-- <i class="fa-sharp fa-solid fa-up-long"></i> -->
+
+                                      <span class="material-symbols-rounded"
+                                        (click)="updateProduct(item.SanPhamID,item.Quantity-1,item.SOLUONGTON,'giam')">
+                                        arrow_left
+                                      </span>
+                                      <!-- </button> -->
+
+                                      <span class="material-symbols-rounded"
+                                        (click)="updateProduct(item.SanPhamID,item.Quantity+1,item.SOLUONGTON,'tang')">
+                                        arrow_right
+                                      </span>
+                                      <!-- <button
+                                        class="btn btn-touchspin js-touchspin js-decrease-product-quantity bootstrap-touchspin-down"
+                                        type="button" (click)="updateProduct(item.SanPhamID,item.Quantity-1)">
+                                        <i class="material-icons touchspin-down">
+
+                                        </i>
+                                      </button> -->
+                                    </span>
+                                  </div>
+                                  <div>{{item.Validate}}</div>
+
+                                </div>
+                                <div class="col-md-7 col-xs-2 col-sp-12 price">
+                                  <span class="product-price">
+                                    <strong style="font-size: 14px;"> {{item.GIABAN * item.Quantity | currency : 'vnd '
+                                      : 'symbol' : '1.0-0'}}
+                                    </strong>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-2 col-xs-2 text-xs-right">
+                              <div class="cart-line-product-actions">
+                                <a class="remove-from-cart" rel="nofollow" (click)="deleteProduct(item.SanPhamID)"
+                                  data-link-action="delete-from-cart" data-id-product="3" data-id-product-attribute="13"
+                                  data-id-customization="">
+                                  <span class="material-symbols-rounded">
+                                    delete
+                                  </span>
+                                </a>
+
+
+
+
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                      </div>
+
+                    </li>
+
+                  </ul>
+                </div>
+
+
+
+              </div>
+              <a class="label" href="https://demo3.leotheme.com/prestashop/leo_bookery_demo/en/">
+                <i class="material-icons"></i>Continue shopping
+              </a>
+
+            </div>
+
+            <div class="cart-grid-right col-xs-12 col-lg-4">
+              <div class="card cart-summary">
+
+                <!-- begin checkout/_partials/cart-detailed-totals.tpl -->
+
+
+                <!-- begin checkout/_partials/cart-detailed-totals.tpl -->
+
+                <div class="cart-detailed-totals">
+
+                  <div class="card-block">
+                    <div class="cart-summary-line" id="cart-subtotal-products">
+                      <span class="label js-subtotal">
+                        Tổng số lượng Sản phẩm:
+                      </span>
+                      <span class="value">
+                        {{soluongtong}} Sản phẩm </span>
+                    </div>
+                    <div class="cart-summary-line" id="cart-subtotal-shipping">
+                      <span class="label">
+                        Phí vật chuyển
+                      </span>
+                      <span class="value">
+                        <!-- $7.00 -->
+                      </span>
+                      <div><small class="value"></small></div>
+                    </div>
+                  </div>
+
+
+
+                  <!-- begin checkout/_partials/cart-summary-totals.tpl -->
+                  <div class="card-block cart-summary-totals">
+
+
+                    <!-- <div class="cart-summary-line">
+                      <span class="label">Tổng (Giá Gốc) :</span>
+                      <span class="value">{{gianhap | currency : 'vnd ' : 'symbol' : '1.0-0' }}</span>
+                    </div> -->
+                    <div class="cart-summary-line cart-total">
+                      <span class="label">Tổng (Giá khuyến mãi) :</span>
+                      <span class="value"> {{totalMoney | currency : 'vnd ' : 'symbol' : '1.0-0' }}</span>
+                    </div>
+
+
+
+                    <div class="cart-summary-line">
+                      <span class="label sub">Tổng :</span>
+                      <span class="value sub">{{totalMoney | currency : 'vnd ' : 'symbol' : '1.0-0' }}</span>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="checkout cart-detailed-actions card-block">
+                  <div class="text-sm-center">
+                    <!-- <a href="https://demo3.leotheme.com/prestashop/leo_bookery_demo/en/order"
+                      class="btn btn-outline">Proceed to checkout</a> -->
+                    <a  class="btn btn-outline" href="/checkout">Tiến hành thanh toán</a>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Shop Cart Section End -->
+<!-- <div >
+  <form class="vue-form" type="submit">
+    <fieldset>
+      <legend class="reservation-form-title">Thông tin giao hàng</legend>
+      <div>
+        <label class="label" for="fullname">Họ tên người nhận</label>
+        <input [(ngModel)]="FullName" type="text" name="fullname" id="fullname" v-model="formData.name">
+      </div>
+
+      <div>
+        <label class="label" for="phonenumber">Phone Number</label>
+        <input [(ngModel)]="Phone" type="text" name="phonenumber" id="phonenumber" v-model="formData.phone">
+      </div>
+      <div>
+        <label class="label" for="email">Email</label>
+        <input type="email" name="email" id="email" :class="{ email , error: !formData.email.valid }"
+          v-model="formData.email.value">
+      </div>
+      <div>
+        <label class="label" for="fullname">Địa chỉ</label>
+        <input [(ngModel)]="Address" type="text" name="Address" id="Address" v-model="formData.name">
+      </div>
+      <div v-show="!formData.email.valid" class="error-message">
+      </div>
+
+
+      <div>
+        <h4>Hình thức thanh toán</h4>
+
+        <ul class="vue-form-list">
+
+          <li>
+            <input type="radio" name="pttt radio-1" id="payment radio-1" checked value="Dunhua"
+              v-model="formData.location">
+            <label for="payment radio-1">Tiền mặt
+            </label>
+
+          </li>
+          <li>
+            <input type="radio" name="pttt radio-1" id="payment1 radio-1" disabled="disabled" value="Dunhua"
+              v-model="formData.location">
+            <label for="payment1 radio-1">Tài khoản ngân hàng
+            </label>
+
+          </li>
+
+        
+        </ul>
+      </div>
+
+
+      <div>
+
+
+        <label class="label" for="notes">Message</label>
+        <textarea class="message" name="notes" id="focusItem" required="" v-model="formData.message"
+          :maxlength="message.maxlength" [(ngModel)]="Notes" placeholder="Lưu ý với của hàng"></textarea>
+        <span class="counter"></span>
+
+      </div>
+      <div>
+        <input type="submit" value="Hoàn tất" (click)="letOrder()">
+      </div>
+    </fieldset>
+  </form> -->
+<!-- chọn tỉnh huyện zxax -->
+  <!-- <div class="checkbox-form mb-sm-40">
+    <h3>Thông tin người nhận</h3>
+    <div class="row">
+
+
+      <div class="col-md-12 mb-2">
+        <div class="checkout-form-list">
+          <label>Tỉnh <span class="required">*</span></label>
+          <div class="nice-select sorter wide disabled" tabindex="0"><span class="current">--Chọn
+              tỉnh--</span>
+            <select #province (change)="getDistrict(province.value)" class="list">
+              <option [value]="item.name" class="option" *ngFor="let item of listCity">
+                {{item.name}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 mb-2">
+        <div class="checkout-form-list">
+          <label>Huyện <span class="required">*</span></label>
+          <div class="nice-select sorter wide disabled" id="huyen" tabindex="0"><span class="current">--Chọn
+              huyện--</span>
+            <select  #district (change)="getCommune(district.value)" class="list">
+              <option  [value]="item.name"  class="option" *ngFor="let item of listDistrict">
+                {{item.name}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-12 mb-2">
+        <div class="checkout-form-list">
+          <label>Xã <span class="required">*</span></label>
+          <div class="nice-select sorter wide disabled" id="xa" tabindex="0"><span class="current">--Chọn
+              xã--</span>
+            <select  #district (change)="getNameCommune(district.value)" class="list">
+              <option [value]="item.name"  class="option" *ngFor="let item of listCommune">
+                {{item.name}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- chọn tinhhuyen xa -->
+
+
+
+  <!-- <div class="debug">
+    <pre>
+    <p>Form Information</p>
+    <code>{{ $data.formData}}</code>
+    
+</pre>
+  </div> -->
+
+<!-- </div> -->
+
+<script>
+  // Regular expression from W3C HTML5.2 input specification:
+  // https://www.w3.org/TR/html/sec-forms.html#email-state-typeemail
+  var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+  new Vue({
+    // root node
+    el: "#app",
+    // the instance state
+    data: function () {
+      return {
+        formData: {
+          name: "Sophie Wang",
+          phone: 0912123123,
+          email: {
+            value: "example@gmail.com",
+            valid: true,
+          },
+          guestNumber: 1,
+          location: "Dunhua",
+          needs: [],
+          message: "hi..."
+        },
+
+        guests: [
+          { value: 1, text: '1 adult' },
+          { value: 2, text: '2 adults' },
+          { value: 3, text: '3 adults' },
+          { value: 4, text: '4 adults' },
+          { value: 5, text: '5 adults' },
+        ],
+        features: ["Birthday Cake", "Cupon", "Commemorative Photo"],
+
+        errorMessage: 'It is a valid email address.',
+        message: {
+
+          maxlength: 255
+        },
+        submitted: false
+      };
+    },
+    methods: {
+      submitForm() {
+        const name = this.formData.name;
+        const email = this.formData.email.value;
+        var msg = "Hi, " + name + "! \n";
+        msg += "Booking information has been sent to " + email + ". \n";
+        msg += "Thank you ^_^"
+        alert(msg);
+      },
+      // submit form handler
+      submit: function () {
+        this.submitted = true;
+      },
+      // validate by type and value
+      validate: function (type, value) {
+        if (type === "email") {
+          this.formData.email.valid = this.isEmail(value) ? true : false;
+        }
+      },
+      // check for valid email adress
+      isEmail: function (value) {
+        return emailRegExp.test(value);
+      },
+      // check or uncheck all
+      checkAll: function (event) {
+        this.formData.needs = event.target.checked ? this.features : [];
+      }
+    },
+    watch: {
+      // watching nested property
+      "formData.email.value": function (value) {
+        this.validate("email", value);
+      }
+    }
+  });
+
+</script>

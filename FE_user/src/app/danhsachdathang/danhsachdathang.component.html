@@ -1,0 +1,80 @@
+<style>
+    table{
+        width: 80%;
+        border-collapse:separate; 
+  border-spacing: 0 1em;
+  margin:0 auto; /* this will center the page */
+
+    }
+    .breadcrumb{
+        margin-left:120px; /* this will center the page */
+
+    }
+    table tbody tr td {
+        margin: 0 auto;
+    }
+    
+</style>
+<section id="cart_items">
+    <div class="container">
+         <div class="breadcrumbs">
+              <ol class="breadcrumb">
+                   <li><a href="index.html" >Home</a></li>
+                   <li class="active"> /Danh sách đơn hàng </li>
+              </ol>
+         </div>
+         <div class="table-responsive cart_info"  id="myCart">
+              <table class="table table-bordered ">
+                   <thead>
+                        <tr class="cart_menu">
+                            <th class="image align-center">STT </th>
+
+                             <th class="image align-center">Tên người nhận </th>
+                             <th class="dateorder">Ngày đặt hàng</th>
+                             <th class="dateorder">Địa chỉ </th>
+                             <th class="price">Tổng tiền hàng </th>
+                             <th class="trangthai" >Trạng thái mua hàng</th>
+
+                        </tr>
+                   </thead>
+                   <tbody>
+                    <tr *ngFor="let item of MyOrders| paginate : { itemsPerPage: 10, currentPage: page, totalItems: totalLength}; let i=index">
+                        <td>{{((page-1)*10)+i+1}}</td>
+
+                             <td class="cart_description">
+                                  <h4><a>{{item.NguoiNhan}}</a></h4>
+                             </td>
+                             <td class="cart_description">
+                                <h4>
+                                     <a>{{item.NgayDat | date:'d/M/yy' }}</a>
+                                </h4>
+                           </td>
+                           <td class="cart_description">
+                            <h4><a>{{item.DiaChi}}</a></h4>
+                       </td>
+                             <td class="cart_price">
+                                  <h4><a>{{item.Tongtienmua | currency: "VND"}}</a></h4>
+                             </td>
+                            
+                             <td >
+                                <a class="trangthai">
+                                   <p style="background-color: #878676d1; color: #fff; display: flex; justify-content: center; align-items: center;" *ngIf="item.Trangthaimua == 0">Chờ xác nhận</p>
+                                   <p style="background-color: rgb(44, 89, 236); color: #fff; border-radius: 8%; display: flex; justify-content: center; align-items: center;" *ngIf="item.Trangthaimua == 1">Đang xử lý</p>
+                                   <p style="background-color: rgb(233 198 58);  color: #000000; border-radius: 8%; display: flex; justify-content: center; align-items: center;" *ngIf="item.Trangthaimua == 2">Đang giao hàng</p>
+                                   <p style="background-color: #ff0000b3;  color: #fff; border-radius: 8%; display: flex; justify-content: center; align-items: center;" *ngIf="item.Trangthaimua == 3">Bị hủy</p>
+                                   <p style="background-color: #6bca6b;  color: #000000; border-radius: 8%; display: flex; justify-content: center; align-items: center;" *ngIf="item.Trangthaimua == 4">Hoàn thành</p>
+                                  </a>
+                           </td>
+                           <!-- <td class="cart_price">
+                                <h4><a>{{item.ThoiGian}}</a></h4>
+                           </td> -->
+                          
+                        </tr>
+                   </tbody>
+              </table>
+              <pagination-controls onclick="scrollToTop()"  previousLabel="Prev"
+              nextLabel="Next"
+              (pageChange)="page = $event" ></pagination-controls>
+     </div>
+    </div>
+  </section>
